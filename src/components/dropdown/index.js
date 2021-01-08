@@ -522,7 +522,7 @@ export default class Dropdown extends PureComponent {
               renderAccessory={renderAccessory}
               theme={{
                 colors: {
-                  placeholder: 'white',
+                  placeholder: 'rgb(185,193,202)',
                   text: textColor,
                   underlineColor: 'transparent',
                   background: 'transparent',
