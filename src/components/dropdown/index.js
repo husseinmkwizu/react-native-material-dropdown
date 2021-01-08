@@ -478,6 +478,8 @@ export default class Dropdown extends PureComponent {
     renderBase(props) {
         let { value } = this.state;
         let {
+            fontSize,
+            textColor,
             data,
             renderBase,
             labelExtractor,
@@ -506,13 +508,26 @@ export default class Dropdown extends PureComponent {
 
         return (
             <TextInput
-                style={{backgroundColor: "transparent", marginBottom: 16}}
-                label=''
-                {...props}
-                value={title}
-                editable={false}
-                onChangeText={undefined}
-                renderAccessory={renderAccessory}
+              style={{
+                fontSize: fontSize,
+                width: '100%',
+                fontWeight: 'bold',
+                color: 'white',
+                backgroundColor: 'transparent',
+              }}
+              {...props}
+              value={title}
+              editable={false}
+              onChangeText={undefined}
+              renderAccessory={renderAccessory}
+              theme={{
+                colors: {
+                  placeholder: 'white',
+                  text: textColor,
+                  underlineColor: 'transparent',
+                  background: 'transparent',
+                },
+              }}
             />
         );
     }
